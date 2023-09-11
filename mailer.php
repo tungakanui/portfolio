@@ -1,9 +1,13 @@
 <?php
+    header("Access-Control-Allow-Origin: *");
+    header("Access-Control-Allow-Methods: POST");
+    header("Access-Control-Allow-Headers: Content-Type");
+    header("Content-Type: application/json");
 
     if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
         # FIX: Replace this email with recipient email
-        $mail_to = "tanbirsylhet20@gmail.com";
+        $mail_to = "tung.ngthanh99@gmail.com";
         
         # Sender Data
         $name    = str_replace(array("\r","\n"),array(" "," ") , strip_tags(trim($_POST["full-name"])));
